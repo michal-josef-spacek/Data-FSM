@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Mo qw(build is);
-use Mo::utils 0.28 qw(check_code check_isa check_number_id);
+use Mo::utils 0.28 qw(check_code check_isa check_number_id check_required);
 
 our $VERSION = 0.01;
 
@@ -31,12 +31,14 @@ sub BUILD {
 	check_code($self, 'callback');
 
 	# Check from.
+	check_required($self, 'from');
 	check_isa($self, 'from', 'Data::FSM::State');
 
 	# Check id.
 	check_number_id($self, 'id');
 
 	# Check to.
+	check_required($self, 'to');
 	check_isa($self, 'to', 'Data::FSM::State');
 
 	return;
