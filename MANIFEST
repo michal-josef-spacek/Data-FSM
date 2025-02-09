@@ -21,10 +21,13 @@ META.yml
 README
 t/Data-FSM-State/01-use.t
 t/Data-FSM-State/02-version.t
+t/Data-FSM-State/03-new.t
 t/Data-FSM-Transition/01-use.t
 t/Data-FSM-Transition/02-version.t
+t/Data-FSM-Transition/03-new.t
 t/Data-FSM/01-use.t
 t/Data-FSM/02-version.t
+t/Data-FSM/03-new.t
 xt/Data-FSM-State/01-pod_coverage.t
 xt/Data-FSM-State/02-pod.t
 xt/Data-FSM-Transition/01-pod_coverage.t
