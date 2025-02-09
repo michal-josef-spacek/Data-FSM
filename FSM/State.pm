@@ -12,8 +12,18 @@ has id => (
 	is => 'ro',
 );
 
+has name => (
+	is => 'ro',
+);
+
 sub BUILD {
 	my $self = shift;
+
+	# Check id.
+	check_number_id($self, 'id');
+
+	# Check name.
+	# TODO
 
 	return;
 }
