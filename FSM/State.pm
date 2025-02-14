@@ -27,10 +27,10 @@ sub BUILD {
 	check_number_id($self, 'id');
 
 	# Check inital.
-	if (! defined $self->{'inital'}) {
-		$self->{'inital'} = 0;
+	if (! defined $self->{'initial'}) {
+		$self->{'initial'} = 0;
 	}
-	check_bool($self, 'inital');
+	check_bool($self, 'initial');
 
 	# Check name.
 	# TODO
