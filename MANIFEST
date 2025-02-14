@@ -28,6 +28,10 @@ t/Data-FSM-State/06-name.t
 t/Data-FSM-Transition/01-use.t
 t/Data-FSM-Transition/02-version.t
 t/Data-FSM-Transition/03-new.t
+t/Data-FSM-Transition/04-callback.t
+t/Data-FSM-Transition/05-from.t
+t/Data-FSM-Transition/06-id.t
+t/Data-FSM-Transition/07-to.t
 t/Data-FSM/01-use.t
 t/Data-FSM/02-version.t
 t/Data-FSM/03-new.t
