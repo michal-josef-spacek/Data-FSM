@@ -5,6 +5,7 @@ use warnings;
 
 use Mo qw(build default is);
 use Mo::utils 0.28 qw(check_array_object check_number_id);
+use Data::FSM::Utils qw(check_transition_objects);
 
 our $VERSION = 0.01;
 
@@ -33,7 +34,7 @@ sub BUILD {
 
 	# Check transitions.
 	check_array_object($self, 'transitions', 'Data::FSM::Transition');
-	# TODO Check states in transitions.
+	check_transition_objects($self, 'transitions', $self->states);
 
 	return;
 }
