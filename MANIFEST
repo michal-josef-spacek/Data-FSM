@@ -22,6 +22,9 @@ README
 t/Data-FSM-State/01-use.t
 t/Data-FSM-State/02-version.t
 t/Data-FSM-State/03-new.t
+t/Data-FSM-State/04-id.t
+t/Data-FSM-State/05-initial.t
+t/Data-FSM-State/06-name.t
 t/Data-FSM-Transition/01-use.t
 t/Data-FSM-Transition/02-version.t
 t/Data-FSM-Transition/03-new.t
