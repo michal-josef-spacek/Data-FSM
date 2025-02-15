@@ -22,6 +22,12 @@ sub check_transition_objects {
 
 	check_array($self, $key);
 
+	if (! defined $objects_ar
+		|| ref $objects_ar ne 'ARRAY') {
+
+		err "Parameter '$key' check hasn't defined state objects.";
+	}
+
 	foreach my $obj (@{$self->{$key}}) {
 		if (none { $obj->from eq $_ } @{$objects_ar}) {
 			err "Parameter '$key' contains object which has 'from' object which isn't in defined objects.",
