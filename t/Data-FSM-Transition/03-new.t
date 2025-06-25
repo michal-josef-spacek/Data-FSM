@@ -5,7 +5,7 @@ use Data::FSM::State;
 use Data::FSM::Transition;
 use English;
 use Error::Pure::Utils qw(clean);
-use Test::More 'tests' => 6;
+use Test::More 'tests' => 8;
 use Test::NoWarnings;
 
 # Test.
@@ -61,8 +61,42 @@ eval {
 		),
 	);
 };
-is($EVAL_ERROR, "Parameter 'id' must be a natural number.\n",
+is($EVAL_ERROR, "Parameter 'id' must be a positive natural number.\n",
 	"Parameter 'id' must be a natural number (bad).");
+clean();
+
+# Test.
+eval {
+	Data::FSM::Transition->new(
+		'from' => Data::FSM::State->new(
+			'initial' => 1,
+			'name' => 'initial',
+		),
+		'id' => 0,
+		'to' => Data::FSM::State->new(
+			'name' => 'run',
+		),
+	);
+};
+is($EVAL_ERROR, "Parameter 'id' must be a positive natural number.\n",
+	"Parameter 'id' must be a natural number (0).");
+clean();
+
+# Test.
+eval {
+	Data::FSM::Transition->new(
+		'from' => Data::FSM::State->new(
+			'initial' => 1,
+			'name' => 'initial',
+		),
+		'id' => -1,
+		'to' => Data::FSM::State->new(
+			'name' => 'run',
+		),
+	);
+};
+is($EVAL_ERROR, "Parameter 'id' must be a positive natural number.\n",
+	"Parameter 'id' must be a natural number (-1).");
 clean();
 
 # Test.

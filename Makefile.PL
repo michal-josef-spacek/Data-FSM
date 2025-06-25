@@ -23,6 +23,7 @@ requires 'Exporter' => 0;
 requires 'List::Util' => 1.33;
 requires 'Mo' => 0;
 requires 'Mo::utils' => 0.28;
+requires 'Mo::utils::Number' => 0;
 requires 'Readonly' => 0;
 resources 'bugtracker' => 'https://github.com/michal-josef-spacek/Data-FSM/issues';
 resources 'homepage' => 'https://github.com/michal-josef-spacek/Data-FSM';

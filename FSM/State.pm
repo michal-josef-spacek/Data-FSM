@@ -4,7 +4,8 @@ use strict;
 use warnings;
 
 use Mo qw(build is);
-use Mo::utils 0.28 qw(check_bool check_length check_number_id);
+use Mo::utils 0.28 qw(check_bool check_length);
+use Mo::utils::Number qw(check_positive_natural);
 
 our $VERSION = 0.01;
 
@@ -24,7 +25,7 @@ sub BUILD {
 	my $self = shift;
 
 	# Check id.
-	check_number_id($self, 'id');
+	check_positive_natural($self, 'id');
 
 	# Check inital.
 	if (! defined $self->{'initial'}) {

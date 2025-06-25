@@ -4,7 +4,8 @@ use strict;
 use warnings;
 
 use Mo qw(build default is);
-use Mo::utils 0.28 qw(check_array_object check_number_id);
+use Mo::utils 0.28 qw(check_array_object);
+use Mo::utils::Number qw(check_positive_natural);
 use Data::FSM::Utils qw(check_transition_objects);
 
 our $VERSION = 0.01;
@@ -27,7 +28,7 @@ sub BUILD {
 	my $self = shift;
 
 	# Check id.
-	check_number_id($self, 'id');
+	check_positive_natural($self, 'id');
 
 	# Check states.
 	check_array_object($self, 'states', 'Data::FSM::State');
