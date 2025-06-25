@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Mo qw(build is);
-use Mo::utils 0.28 qw(check_code check_isa check_required);
+use Mo::utils 0.28 qw(check_code check_isa check_length check_required);
 use Mo::utils::Number qw(check_positive_natural);
 
 our $VERSION = 0.01;
@@ -18,6 +18,10 @@ has from => (
 );
 
 has id => (
+	is => 'ro',
+);
+
+has name => (
 	is => 'ro',
 );
 
@@ -37,6 +41,9 @@ sub BUILD {
 
 	# Check id.
 	check_positive_natural($self, 'id');
+
+	# Check name.
+	check_length($self, 'name', 100);
 
 	# Check to.
 	check_required($self, 'to');

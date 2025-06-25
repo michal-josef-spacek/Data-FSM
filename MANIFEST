@@ -33,7 +33,8 @@ t/Data-FSM-Transition/03-new.t
 t/Data-FSM-Transition/04-callback.t
 t/Data-FSM-Transition/05-from.t
 t/Data-FSM-Transition/06-id.t
-t/Data-FSM-Transition/07-to.t
+t/Data-FSM-Transition/07-name.t
+t/Data-FSM-Transition/08-to.t
 t/Data-FSM-Utils/01-use.t
 t/Data-FSM-Utils/02-version.t
 t/Data-FSM-Utils/03-check_transition_objects.t
