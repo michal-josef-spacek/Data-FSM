@@ -3,10 +3,10 @@ package Data::FSM;
 use strict;
 use warnings;
 
+use Data::FSM::Utils qw(check_transition_objects);
 use Mo qw(build default is);
 use Mo::utils 0.28 qw(check_array_object);
 use Mo::utils::Number qw(check_positive_natural);
-use Data::FSM::Utils qw(check_transition_objects);
 
 our $VERSION = 0.01;
 
