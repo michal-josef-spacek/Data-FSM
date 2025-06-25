@@ -31,10 +31,10 @@ sub BUILD {
 	check_positive_natural($self, 'id');
 
 	# Check states.
-	check_array_object($self, 'states', 'Data::FSM::State');
+	check_array_object($self, 'states', 'Data::FSM::State', 'State');
 
 	# Check transitions.
-	check_array_object($self, 'transitions', 'Data::FSM::Transition');
+	check_array_object($self, 'transitions', 'Data::FSM::Transition', 'Transition');
 	check_transition_objects($self, 'transitions', $self->states);
 
 	return;
