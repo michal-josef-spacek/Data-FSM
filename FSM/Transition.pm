@@ -32,20 +32,20 @@ has to => (
 sub BUILD {
 	my $self = shift;
 
-	# Check callback.
+	# Check 'callback'.
 	check_code($self, 'callback');
 
-	# Check from.
+	# Check 'from'.
 	check_required($self, 'from');
 	check_isa($self, 'from', 'Data::FSM::State');
 
-	# Check id.
+	# Check 'id'.
 	check_positive_natural($self, 'id');
 
-	# Check name.
+	# Check 'name'.
 	check_length($self, 'name', 100);
 
-	# Check to.
+	# Check 'to'.
 	check_required($self, 'to');
 	check_isa($self, 'to', 'Data::FSM::State');
 

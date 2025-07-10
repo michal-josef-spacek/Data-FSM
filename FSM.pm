@@ -27,13 +27,13 @@ has transitions => (
 sub BUILD {
 	my $self = shift;
 
-	# Check id.
+	# Check 'id'.
 	check_positive_natural($self, 'id');
 
-	# Check states.
+	# Check 'states'.
 	check_array_object($self, 'states', 'Data::FSM::State', 'State');
 
-	# Check transitions.
+	# Check 'transitions'.
 	check_array_object($self, 'transitions', 'Data::FSM::Transition', 'Transition');
 	check_transition_objects($self, 'transitions', $self->states);
 

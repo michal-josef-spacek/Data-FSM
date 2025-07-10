@@ -24,16 +24,16 @@ has name => (
 sub BUILD {
 	my $self = shift;
 
-	# Check id.
+	# Check 'id'.
 	check_positive_natural($self, 'id');
 
-	# Check inital.
+	# Check 'inital'.
 	if (! defined $self->{'initial'}) {
 		$self->{'initial'} = 0;
 	}
 	check_bool($self, 'initial');
 
-	# Check name.
+	# Check 'name'.
 	check_length($self, 'name', 100);
 
 	return;
